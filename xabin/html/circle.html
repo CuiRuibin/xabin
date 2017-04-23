@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+</head>
+<style>
+  html {
+  box-sizing: border-box;
+  }
+
+  div{
+  word-wrap: break-word;
+  word-break: normal;
+  }
+
+  #mainContent {
+  width: 785px;
+  border: 1px;
+  background-color: #efefef;
+  }
+
+  .group {
+  overflow: hidden;
+  margin: 15px;
+  line-height: 30px;
+  font-size: 14px;
+  }
+
+  .group dl {
+  float: left;
+  margin-right: 15px;
+  }
+  .group dl, .group dt, .group dd {
+  margin: 0;
+  padding: 0;
+  }
+
+  * {
+  margin: 0;
+  padding: 0;
+  }
+  
+  #circle {
+  width:100px;
+  height:100px;
+  background: green;
+  -moz-border-radius:50px;
+  -webkit-border-radius:50px;
+  border-radius: 50px;
+  text-align:center;
+  }
+
+  #start-circle {
+  width: 50px;
+  height: 50px;
+  background: gray;
+  -moz-border-radius:25px;
+  -webkit-border-radius:25px;
+  border-radius: 25px;
+  text-align:center;
+  }
+  
+  #circle span {
+  line-height: 100px;
+  height: 100px;
+  text-align: center;
+  width: 50px;
+  }
+
+  #start-circle span {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 25px;
+  }
+  
+  .arrow {
+  width:0;
+  border-bottom:20px solid #000;
+  border-left:20px solid #fff;
+  border-right:20px solid #fff;
+  }
+  .square{
+  width:40px;
+  height:20px;
+  background:#000;
+  }
+  .arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid green;
+  }
+
+  .new_line {
+  padding: 1px;
+  width:30px;
+  height:5px;
+  border: 5px solid green;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  }
+
+  .line {
+  align:right;
+  width: 100px;
+  height: 10px;
+  margin: 3px auto;
+  padding 4px 4px;
+  background-color: #d5d5d5;
+  overflow:hidden;
+  }
+
+  .level_one {
+  width: 785px;
+  border-style: solid;
+  border-width: medium;
+  border-color: green;
+  background-color: #afefaf;
+  height: 120px;
+  padding-left:10px;
+  padding-top: center;
+  }
+
+  .level_one dl {
+  padding-top:center;
+  float: left;
+  margin: center;
+  line-height: 50%;
+  }
+</style>
+</head>
+<body>
+  <div id="mainContent">
+
+    <div class="group">
+      <dl id="circle"><p style="padding-top: 40px;">abc</p></dl>
+      <dl id="circle"><span>1234</span></dl>
+      <dl id="circle">!@#$</dl>
+
+    </div>
+    
+    <div>
+      <dl id="circle"><p style="padding-top: 40px;">abc</p></dl>
+      <dl id="circle"><span>1234</span></dl>
+      <dl id="circle">!@#$</dl>
+    </div>
+    <div class="arrow"></div>
+    <div class="">abd</div>
+    <div class="square"></div>
+    <div class="arrow-right"></div>
+
+    <div class="new_line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="arrow-right"></div>
+    <div>
+      <span class="line"></span>
+    </div>
+
+    <div class="group">
+      <dl class="line"></dl>
+      <dl class="arrow-right"></dl>
+      </div>
+  </div>
+  <div class="level_one">
+    <dl id="start-circle"><span>Start</span></dl>
+    <dl class="line"></dl>
+    <dl class="arrow-right"></dl>
+    <dl id="circle"><span>Personal</span></dl>
+  </div>
+</body>
+</html>
