@@ -1,5 +1,7 @@
 *.pyc
 *.pyd
 *.egg-info
-*.py[co]
+*.*~
+\#*.*\#
 xabin/settings.py
+*.org
