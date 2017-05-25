@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
-"""
+n"""
 
 import os
 
@@ -20,9 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9^=!91yc!l6sp(1lrk^lrtjzze)ye)w**ne0rwm$_21(b92uyv'
+# SECRET_KEY = '9^=!91yc!l6sp(1lrk^lrtjzze)ye)w**ne0rwm$_21(b92uyv'
+SECRET_KEY='xa!$o$a^uzrj2=%#c(8hyd34qg3@16#1-k=f6zj2q$9fhw_1454ibin'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -37,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'news',
+    'polls',
+    'myapp',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,7 @@ ROOT_URLCONF = 'xabin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/cuiruibin/xabin/polls/templates/', os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +73,13 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+ ]
+
+TEMPLATE_DIRS= (
+)
+
 WSGI_APPLICATION = 'xabin.wsgi.application'
 
 
@@ -74,10 +87,19 @@ WSGI_APPLICATION = 'xabin.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#   }
+     'default': {
+         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+         'ENGINE':'django.db.backends.mysql',
+         'NAME':'dbname',
+         'USER':'username',
+         'PASSWORD':'password',
+         'HOST':'127.0.0.1',
+         'PORT':'3306',
+     }
 }
 
 
